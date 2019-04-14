@@ -1,0 +1,147 @@
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!-- <meta name="description" content="무료디자인소스, 무료PSD 다운, 무료템플릿, 반응형웹 솔루션 판매, html5, 제이쿼리, 무료 스크립트, 워드프레스,아임웹,그누보드">
+<meta name="Keywords" content="무료디자인소스, 무료PSD 다운, 무료템플릿, 반응형웹 솔루션 판매, html5, 제이쿼리, 무료 스크립트, 워드프레스,아임웹,그누보드">
+<meta property="og:site_name" content="웹쟁이 | 무료 웹소스 제공">
+<meta property="og:title" content="웹쟁이 | 무료 웹소스 제공">
+<meta property="og:description" content="무료디자인소스, 무료PSD 다운, 무료템플릿, 반응형웹 솔루션 판매, html5, 제이쿼리, 무료 스크립트, 워드프레스,아임웹,그누보드"> -->
+<!-- <meta property="og:url" content="http://www.webjangi.com">
+<meta property="og:image" content="http://webjangi.com/assets/img/common/sns_bg.jpg">
+<meta name="msapplication-TileImage" content="http://webjangi.com/assets/img/common/sns_title_img.png"> -->
+<meta name="naver-site-verification" content="1e24e6ce687adc9cef907046c025298b5c7d1892">
+<title>로그인 | CARE-GRAYBLUE</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="../css/1200.css" media="all and (min-width:961px) and (max-width:1300px)">
+<link rel="stylesheet" href="../css/250.css" media="all and  (max-width:960px)">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
+<!--[if lte IE 8]>
+<script src="http://sample01.openfield.co.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "";
+var g5_bbs_url   = "../bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/wrest.js"></script>
+<script src="../js/placeholders.min.js"></script>
+<script src="../js/front_ui.js"></script>
+
+
+
+</head>
+<body>
+
+
+
+  <article class="login_area">
+
+		<h3>로그인</h3>
+         <form name="flogin" action="" onsubmit="return flogin_submit(this);" method="post">
+    <input type="hidden" name="url" value="http%3A%2F%2Fsample01.openfield.co.kr">
+
+      	<div class="login_Box">
+            <div class="login_space">
+                <ul class="login_part">
+                    <li>
+                     <input type="text" name="mb_id" id="login_id" class="id_input" required="" placeholder="아이디">
+                    </li>
+                    <li>
+                     <input type="password" name="mb_password" id="login_pw" class="pw_input" required="" placeholder="패스워드">
+                    </li>
+                </ul>
+                <div class="auto">
+                    <label><input type="checkbox" name="auto_login" id="login_auto_login">자동로그인</label><a href="../bbs/password_lost.php" target="_blank" id="login_password_lost">아이디 비밀번호 찾기</a>
+                </div>
+                <div class="login_btn_area">
+                    <div class="pop_btn_area"><input type="submit" class="pop_btn" value="로그인"></div>
+                    <p>
+
+
+
+                <a href="../bbs/naver_login.php" class="sns-icon social_link sns-naver" title="네이버">
+            <img src="../img/main/login_site01.png" alt="네이버">
+        </a>
+                        <a href="" class="sns-icon social_link sns-kakao" title="카카오">
+          <img src="../img/main/login_site04.png" alt="카카오톡">
+        </a>
+                        <a href="" class="sns-icon social_link sns-facebook" title="페이스북">
+          <img src="../img/main/login_site02.png" alt="페이스북">
+        </a>
+                        <a href="" class="sns-icon social_link sns-google" title="구글">
+           <img src="../img/main/login_site03.png" alt="구글">
+        </a>
+                        <a href="" class="sns-icon social_link sns-twitter" title="트위터">
+           <img src="../img/main/login_site05.png" alt="트위터">
+        </a>
+
+                <script>
+            jQuery(function($){
+                $(".login_btn_area").on("click", "a.social_link", function(e){
+                    e.preventDefault();
+
+                    var pop_url = $(this).attr("href");
+                    var newWin = window.open(
+                        pop_url,
+                        "social_sing_on",
+                        "location=0,status=0,scrollbars=0,width=600,height=500"
+                    );
+
+                    if(!newWin || newWin.closed || typeof newWin.closed=='undefined')
+                         alert('브라우저에서 팝업이 차단되어 있습니다. 팝업 활성화 후 다시 시도해 주세요.');
+
+                    return false;
+                });
+            });
+        </script>
+                            </p>
+
+                </div>
+            </div>
+            <div class="last_login">
+                <dl>
+                    <dd>회원이 아니십니까?</dd>
+                    <dt><a href="../bbs/register.php" class="last_btn">회원가입</a></dt>
+                </dl>
+            </div>
+       </div>
+         </form>
+
+  </article>
+
+
+<script>
+$(function(){
+    $("#login_auto_login").click(function(){
+        if (this.checked) {
+            this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
+        }
+    });
+});
+
+function flogin_submit(f)
+{
+    return true;
+}
+</script>
+<!-- } 로그인 끝 -->
+
+
+
+
+<span class="dimd"></span></body></html>

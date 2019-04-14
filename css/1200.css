@@ -1,0 +1,133 @@
+/*메인*/
+header .head_in {padding:0 30px;}
+#header.fix .head_in p {bottom:18px;}
+.in_area {width:100%; padding:0 50px; box-sizing:border-box;}
+
+
+
+/*버튼*/
+.arrow_btn {width:266px; height:58px; line-height:58px;}
+.arrow_btn01 {width:266px; height:58px; line-height:58px;}
+
+
+
+.main_viual .viual .visual_text {margin:320px 0 0 50px;}
+
+
+/*롤링*/
+.downBtn {bottom:20px;}
+.slick-dots{bottom:110px;}
+
+
+
+.main_viual .viual .visual_text p {font-size:65px; line-height:80px;}
+.main_viual .viual .visual_text .small {padding-top:30px; font-size:30px; line-height:30px;}
+
+
+.sec01 {padding:80px 0;}
+.sec01 ul {padding:80px 40px;}
+.sec01 ul li dl {padding-top:20px;}
+.sec01 ul li dl dt {font-size:45px; line-height:45px; padding-bottom:20px;}
+.sec01 ul li dl .mt {font-size:30px; line-height:38px; padding-bottom:15px;}
+.sec01 ul li dl .st {font-size:18px; line-height:32px; color:#616161; padding-bottom:20px;}
+.sec01 ul li dl .st br {display:none;}
+
+
+
+.sec02 ul.part_text li:first-child {font-size:65px;}
+.sec02 ul.part_text {padding:300px 35px 130px;}
+.sec02 ul.part_text li dl {padding-top:20px;}
+
+
+
+.sec03 ul li {height:523px;}
+.sec03 ul li.space {padding:80px 40px; box-sizing:border-box;}
+.sec03 ul li dl dt {font-size:45px; line-height:58px; padding-bottom:20px;}
+.sec03 ul li dl .mt {font-size:30px; line-height:38px; padding-bottom:15px;}
+.sec03 ul li dl .st {font-size:18px; line-height:32px; color:#e8e3de; padding-bottom:20px;}
+
+
+
+.sec04 ul li {height:540px;}
+.sec04 ul li:nth-child(1) {padding:80px 40px;}
+.sec04 ul li dl {padding-bottom:80px;}
+.sec04 ul li dl dt {font-size:60px; line-height:60px; padding-bottom:30px;}
+.sec04 ul li p {padding:5px 0; color:#fff;}
+#map_google {width:100%; height:540px;}
+
+
+
+/*******서브페이지**************/
+
+.sub_visual {height:380px;}
+.sub_visual p {font-size:24px; line-height:38px;}
+
+
+/*인사말*/
+.intro_sec ul li dl dt br {display:none;}
+.intro_sec ul li dl dd br {display:none;}
+.intro_sec ul li:last-child {padding:30px 25px;}
+
+/*오시는길*/
+.directions li a dl dt {font-size:23px;}
+.directions li a dl dd br {display:none;}
+.directions li {padding:30px 0;}
+.directions li a {height:210px;}
+
+
+/*문의사항*/
+.news_table dl.subject dt {width:140px;}
+.news_table .sell dl dt {width:140px;}
+
+
+
+.view_tab ul {width:100%; padding:0 15px; box-sizing:border-box;}
+
+
+
+.locationWrap {left:50px;}
+
+
+
+/*프로그램*/
+.content_area02 ul.part_text li:first-child {font-size:65px;}
+.content_area02 ul.part_text {padding:300px 35px 60px;}
+.content_area02 ul.part_text li dl {padding-top:20px;}
+.content_area02 .sec_slide .part:last-child {padding-top:60px;}
+.content_area02 .part p img {width:100%;}
+
+
+/*이용안내*/
+.info_area ul li {width:100%;}
+.info_area ul li:first-child {padding-right:0px; margin-bottom:24px;}
+.info_area ul li:last-child {padding-left:0px;}
+.info_area ul li .info_box {height:inherit;}
+
+
+/*서브탭*/
+.location {width:100%; padding:0 15px; box-sizing:border-box;}
+
+
+
+/*공지사항*/
+.notice_box ul {width:100%;}
+.notice_box ul li {width:33.3%; margin-right:0px; padding:0 10px; box-sizing:border-box;}
+.notice_box ul li p {width:100%; height:221px;}
+
+
+/*공지사항뷰페이지*/
+.notice_view dl dt {width:100%;}
+.notice_view dl dd {float:left; padding-top:15px;}
+
+/* 1:1 문의 */
+.boardType2 .boardList .title{width:-webkit-calc(100% - 510px); width:calc(100% - 510px);}
+
+
+@media all and (min-width:960px) and (max-width:1140px) {
+header .head_in .nav ul li {padding:0 10px;}
+}
+
+
+@media all and (min-width:960px) and (max-width:1070px) {
+
+}

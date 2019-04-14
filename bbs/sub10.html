@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="naver-site-verification" content="1e24e6ce687adc9cef907046c025298b5c7d1892"/>
+<title>자유게시판 | CARE-GRAYBLUE</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+<link rel="stylesheet" href="../skin/social/style.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" href="../css/1200.css" media="all and (min-width:961px) and (max-width:1300px)">
+<link rel="stylesheet" href="../css/250.css" media="all and  (max-width:960px)">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "";
+var g5_bbs_url   = "../bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="../js/jquery-1.11.2.min.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/wrest.js"></script>
+<script src="../js/placeholders.min.js"></script>
+<script src="../js/front_ui.js"></script>
+
+
+
+</head>
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+<header id="header">
+	<div class="head_in">
+          <h1><a href="../index.html"><img src="../img/main/logo.png" alt="CARE-GRAYBLUE"></a></h1>
+        <div class="nav">
+            <ul id="nav">
+                     <li class=''><a href="../bbs/sub01.html" target="_self"><span>조리원소개</span></a>
+             <ul>
+                        <li><a href="../bbs/sub01.html" target="_self"><span></span>인사말</a></li>
+                                            <li><a href="../bbs/sub02.html" target="_self"><span></span>조리원소개</a></li>
+                                            <li><a href="../bbs/sub03.html" target="_self"><span></span>오시는 길</a></li>
+                    </ul>
+            </li>
+                         <li class=''><a href="../bbs/sub04.html" target="_self"><span>시설보기</span></a>
+                         </li>
+                         <li class=''><a href="../bbs/sub05.html" target="_self"><span>프로그램</span></a>
+                         </li>
+                         <li class=''><a href="../bbs/sub06.html" target="_self"><span>이용안내</span></a>
+                         </li>
+                         <li class='on'><a href="../bbs/sub07.html" target="_self"><span>커뮤니티</span></a>
+             <ul>
+                        <li><a href="../bbs/sub07.html" target="_self"><span></span>공지사항</a></li>
+                                            <li><a href="../bbs/sub08.html" target="_self"><span></span>1:1문의</a></li>
+                                            <li><a href="../bbs/sub09.html" target="_self"><span></span>자주하는 질문</a></li>
+                                            <li><a href="../bbs/sub10.html" target="_self"><span></span>자유게시판</a></li>
+                    </ul>
+            </li>
+
+            </ul>
+        </div>
+               <script>
+$(function(){
+
+  $("input").each(function(){
+    $(this).bind("focus", function(){
+        $(".popup ").css("position", "absolute");
+
+    });
+    $(this).bind("blur",function(){
+
+        $(".popup").css("position", "fixed");
+
+    });
+  });
+});
+</script>
+ <div class="login login_pc"><a href="#pop01" class="btn_pop">로그인</a></div>
+<!--모바일인경우--> <div class="login login_mobile"><a href="" >로그인</a></div>
+<!-- popup -->
+<div class="black_bg">
+<section class="popup" id="pop01">
+    <!-- pop_area -->
+      <article class="pop_part">
+    <div class="pop_cl"><span><img src="../img/main/pop_cl.png" alt="닫기"></span></div>
+    <div class="pop_area">
+    <form name="foutlogin" action="" onsubmit="return fhead_submit(this);" method="post" autocomplete="off">
+    	<input type="hidden" name="url" value="%2Fbbs%2Fboard.php%3Fbo_table%3Dfree">
+        <div class="pop_cont">
+        	<div class="pop_in">
+				<p class="pop_tt">로그인</p>
+                <ul class="login_part">
+                    <li><input type="text" id="ol_id" name="mb_id" required class="id_input"  placeholder="아이디"> </li>
+                    <li><input name="mb_password"   type="password" required class="pw_input" placeholder="패스워드"></li>
+                </ul>
+                <div class="auto">
+                	<label> <input type="checkbox" name="auto_login" value="1" id="auto_login">자동로그인</label><a href="" id="">아이디 비밀번호 찾기</a>
+                </div>
+                <div class="login_btn_area">
+                	<div class="pop_btn_area"><input type="submit" class="pop_btn" value="로그인"></div>
+
+                    <p>
+
+                <a href="" class="sns-icon social_link sns-naver" title="네이버">
+            <img src="../img/main/login_site01.png" alt="네이버">
+        </a>
+                        <a href="" class="sns-icon social_link sns-kakao" title="카카오">
+          <img src="../img/main/login_site04.png" alt="카카오톡">
+        </a>
+                        <a href="" class="sns-icon social_link sns-facebook" title="페이스북">
+          <img src="../img/main/login_site02.png" alt="페이스북">
+        </a>
+                        <a href="" class="sns-icon social_link sns-google" title="구글">
+           <img src="../img/main/login_site03.png" alt="구글">
+        </a>
+                        <a href="" class="sns-icon social_link sns-twitter" title="트위터">
+           <img src="../img/main/login_site05.png" alt="트위터">
+        </a>
+
+
+                <script>
+            jQuery(function($){
+                $(".login_btn_area").on("click", "a.social_link", function(e){
+                    e.preventDefault();
+
+                    var pop_url = $(this).attr("href");
+                    var newWin = window.open(
+                        pop_url,
+                        "social_sing_on",
+                        "location=0,status=0,scrollbars=0,width=600,height=500"
+                    );
+
+                    if(!newWin || newWin.closed || typeof newWin.closed=='undefined')
+                         alert('브라우저에서 팝업이 차단되어 있습니다. 팝업 활성화 후 다시 시도해 주세요.');
+
+                    return false;
+                });
+            });
+        </script>
+                            </p>
+
+                </div>
+            </div>
+            <div class="last_login">
+            	<dl>
+                	<dd>회원이 아니십니까?</dd>
+                    <dt><a href="" class="last_btn">회원가입</a></dt>
+                </dl>
+            </div>
+        </div>
+        </div>
+        </form>
+    </article>
+    <!-- //pop_area -->
+</section>
+<!-- //popup -->
+</div>
+
+
+<script>
+$omi = $('#ol_id');
+$omp = $('#ol_pw');
+$omp.css('display','inline-block').css('width',104);
+$omi_label = $('#ol_idlabel');
+$omi_label.addClass('ol_idlabel');
+$omp_label = $('#ol_pwlabel');
+$omp_label.addClass('ol_pwlabel');
+
+$(function() {
+    $omi.focus(function() {
+        $omi_label.css('visibility','hidden');
+    });
+    $omp.focus(function() {
+        $omp_label.css('visibility','hidden');
+    });
+    $omi.blur(function() {
+        $this = $(this);
+        if($this.attr('id') == "ol_id" && $this.attr('value') == "") $omi_label.css('visibility','visible');
+    });
+    $omp.blur(function() {
+        $this = $(this);
+        if($this.attr('id') == "ol_pw" && $this.attr('value') == "") $omp_label.css('visibility','visible');
+    });
+
+    $("#auto_login").click(function(){
+        if ($(this).is(":checked")) {
+            if(!confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?"))
+                return false;
+        }
+    });
+});
+
+function fhead_submit(f)
+{
+    return true;
+}
+</script>
+<!-- } 로그인 전 아웃로그인 끝 -->
+    </div>
+    <!--모바일메뉴-->
+     <div class="gnb">
+        <div class="gnb_wrap">
+            <a class="btn_menu open" >열기버튼</a>
+            <a class="btn_menu close" >닫기버튼</a>
+        </div>
+    </div><!--//gnb-->
+    <div class="all_menu">
+        <div class="all_nav">
+            <ul>
+            <li class="mobile act"><a  target="_self">조리원소개</a>
+<ul class="deth_2">
+                        <li><a href="../bbs/sub01.html" target="_self"><span></span>인사말</a></li>
+                        <li><a href="../bbs/sub02.html" target="_self"><span></span>조리원소개</a></li>
+                        <li><a href="../bbs/sub03.html" target="_self"><span></span>오시는 길</a></li>
+</ul>
+            </li>
+            <li class="mobile "><a href='../bbs/sub04.html' target="_self">시설보기</a>
+            </li>
+            <li class="mobile "><a href='../bbs/sub05.html' target="_self">프로그램</a>
+            </li>
+            <li class="mobile "><a href='../bbs/sub06.html' target="_self">이용안내</a>
+            </li>
+            <li class="mobile act"><a  target="_self">커뮤니티</a>
+<ul class="deth_2">
+                        <li><a href="../bbs/sub07.html" target="_self"><span></span>공지사항</a></li>
+                        <li><a href="../bbs/sub08.html" target="_self"><span></span>1:1문의</a></li>
+                        <li><a href="../bbs/sub09.html" target="_self"><span></span>자주하는 질문</a></li>
+                        <li><a href="../bbs/sub10.html" target="_self"><span></span>자유게시판</a></li>
+</ul>
+            </li>
+
+            </ul>
+        </div><!--//all_nav-->
+    </div><!--//all_menu-->
+    <!--//모바일메뉴end-->
+</header>
+<!-- //header -->
+
+
+		<section id="sub_content">
+				 <article class="sub_visual sub_visual05">
+      <p><span>호텔같은 최고급 인테리어,</span> <br />
+<em>한분 한분을 위한 맞춤서비스</em></p>
+  </article><!--//sub_visual-->
+
+  <!--네비게이션_GNB영역-->
+    <div class="navigation" >
+        <div class="location">
+            <div class="locationWrap">
+            <ul>
+                <li class="gnbMenu">
+
+
+                <a  class="first_path">커뮤니티</a>
+                	<div id="first_path" class="path_menu depthDiv">
+                        <ul>
+				            <li><a href="../bbs/sub01.html" target="_self">조리원소개</a></li>
+				            <li><a href="../bbs/sub04.html" target="_self">시설보기</a></li>
+				            <li><a href="../bbs/sub05.html" target="_self">프로그램</a></li>
+				            <li><a href="../bbs/sub06.html" target="_self">이용안내</a></li>
+				            <li><a href="../bbs/sub07.html" target="_self">커뮤니티</a></li>
+      </ul>
+    	</div>
+          </li>
+
+
+   <li class="gnbMenu">
+      <a  class="second_path"> 자유게시판 </a>
+         <div id="second_path" class="path_menu depthDiv">
+        <ul>
+		<li><a href="../bbs/sub07.html" target="_self">공지사항</a></li>
+		<li><a href="../bbs/sub08.html" target="_self">1:1문의</a></li>
+		<li><a href="../bbs/sub09.html" target="_self">자주하는 질문</a></li>
+		<li><a href="../bbs/sub10.html" target="_self">자유게시판</a></li>
+                         </ul>
+                    </div>
+                </li>
+
+
+                </ul>
+            </div><!-- locationWrap -->
+        </div><!-- location-->
+    </div><!--//navigation-->
+
+      <!--//네비게이션_GNB끝-->
+		</article>
+		<article class="content_area02">
+		<div class="in_area">
+
+
+<div class="text_area">
+				<p class="sub_tt"> 자유게시판</p>
+            </div>
+
+
+
+
+<!-- } 게시판 검색 끝 -->
+<fieldset id="bo_sch">
+    <legend>게시물 검색</legend>
+
+      <form name="fsearch" method="get">
+        <input type="hidden" name="bo_table" value="free">
+        <input type="hidden" name="sca" value="">
+        <input type="hidden" name="sop" value="and">
+                <div class="serch_box">
+                    <ul class="ff">
+                     <li class="mm01">
+                      <select name="sfl" id="sfl">
+            <option value="wr_subject">제목</option>
+            <option value="wr_content">내용</option>
+            <option value="wr_subject||wr_content">제목+내용</option>
+            <option value="mb_id,1">회원아이디</option>
+            <option value="mb_id,0">회원아이디(코)</option>
+            <option value="wr_name,1">글쓴이</option>
+            <option value="wr_name,0">글쓴이(코)</option>
+        </select>
+                     </li>
+                        <li class="mm02">
+                            <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                   <input type="text" name="stx" value="" id="stx" required  class="frm_input required" size="15" maxlength="15">
+                        </li>
+                        <li class="mm03">
+                            <button>검색</button>
+                        </li>
+                    </ul>
+                </div><!--//serch_box-->
+            </form>
+</fieldset>
+
+
+
+    <form name="fboardlist" id="fboardlist" action="" onsubmit="return fboardlist_submit(this);" method="post">
+    <input type="hidden" name="bo_table" value="free">
+    <input type="hidden" name="sfl" value="">
+    <input type="hidden" name="stx" value="">
+    <input type="hidden" name="spt" value="">
+    <input type="hidden" name="sca" value="">
+    <input type="hidden" name="sst" value="wr_num, wr_reply">
+    <input type="hidden" name="sod" value="">
+    <input type="hidden" name="page" value="1">
+    <input type="hidden" name="sw" value="">
+ <div class="question">
+<div class="boardType2">
+					<div class="boardList top">
+
+
+
+<p class="num">번호</p>
+                        <p class="title">제목</p>
+                        <p class="name">글쓴이</p>
+						<p class="hit">조회</p>
+						<p class="date">등록일</p>
+					</div>
+                                        <div class="boardList">
+
+
+            	<p class="num"> 12164</p>
+						<p class="title">
+
+                    <a href="">
+                    안녕하세요. 문의 드립니다.
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김지혜</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12163</p>
+						<p class="title">
+
+                    <a href="">
+                    문의 드려요~~
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">박효정</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12162</p>
+						<p class="title">
+
+                    <a href="">
+                    비용 관련 몇 가지 문의드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김서영</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12161</p>
+						<p class="title">
+
+                    <a href="">
+                    산전요가 및 마사지 궁금해요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김선희</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12160</p>
+						<p class="title">
+
+                    <a href="">
+                    비용문의 드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">박효진</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12159</p>
+						<p class="title">
+
+                    <a href="">
+                    비용문의
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">박진주</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12158</p>
+						<p class="title">
+
+                    <a href="">
+                    예약문의 드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김은아</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12157</p>
+						<p class="title">
+
+                    <a href="">
+                    마사지 비용 문의드려요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">이윤영</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12156</p>
+						<p class="title">
+
+                    <a href="">
+                    예약문의 드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">박영주</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12155</p>
+						<p class="title">
+
+                    <a href="">
+                    문의 드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">이미진</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12154</p>
+						<p class="title">
+
+                    <a href="">
+                    안녕하세요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김은주</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12153</p>
+						<p class="title">
+
+                    <a href="">
+                    비용 문의 드립니다
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">이진아</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12152</p>
+						<p class="title">
+
+                    <a href="">
+                    방문상담 예약하고 싶어요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김현정</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12151</p>
+						<p class="title">
+
+                    <a href="">
+                    가격 문의 드려요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">김현주</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+                             <div class="boardList">
+
+
+            	<p class="num"> 12150</p>
+						<p class="title">
+
+                    <a href="">
+                    마사지 비용 좀 알려주세요
+                    </a>
+                    <img src="../img/sub/icon_new.gif" class="title_icon" alt="새글">                                    </p>
+                        <p class="name"><span class="sv_member">박선아</span></p>
+						<p class="hit">0</span></p>
+						<p class="date">2019-04-11 </p>
+					</div>
+
+
+
+
+     </div>
+
+
+          <div class="p_area">
+          <nav class="pg_wrap"><span class="pg"><span class="sound_only">열린</span><strong class="pg_current">1</strong><span class="sound_only">페이지</span>
+
+<!-- <a href="./board.php?bo_table=free&amp;page=2" class="pg_page">2<span class="sound_only">페이지</span></a> -->
+
+<!-- <a href="" class="pg_page">2<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">3<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">4<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">5<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">6<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">7<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">8<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">9<span class="sound_only">페이지</span></a>
+<a href="" class="pg_page">10<span class="sound_only">페이지</span></a> -->
+<a href="" class="pg_page pg_next">다음</a>
+<a href="" class="pg_page pg_end">맨끝</a>
+</span></nav>
+                    <div class="btn_confirm">
+
+                        <em><a href="" class="btn_submitBig">글쓰기</a></em>
+
+                     </div>
+                 </div>
+
+    </form>
+</div>
+
+
+
+
+
+<!-- } 게시판 목록 끝 -->
+      </div>
+        </article>
+</section>
+
+
+<div id="cmTopScroll" class="TopScroll"> <a href="#header" class="top">TOP</a> </div>
+
+  <footer>
+	<p><span>CARE 산후조리원</span>  <em>|</em> 주소 : 경기도 김포시 고촌읍 신곡리 1068-1 엔타운 5층 <em>|</em> <span>사업자등록번호 : 000-00-00000</span> <br>
+     COPYRIGHT @ 2016 CARE 산후조리원. All Right Reserved. </p>
+</footer>
+<!-- //footer -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+
+
+</body>
+</html>
+
+<!-- 사용스킨 : theme/basic -->
